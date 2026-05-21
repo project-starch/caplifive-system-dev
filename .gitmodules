@@ -1,0 +1,12 @@
+[submodule "sw/capstone-c"]
+	path = sw/capstone-c
+	url = https://github.com/jasonyu1996/capstone-c.git
+[submodule "sw/buildroot"]
+	path = sw/buildroot
+	url = https://github.com/project-starch/captainer-buildroot.git
+[submodule "hw/anvil"]
+	path = hw/anvil
+	url = https://github.com/project-starch/Anvil-Experimental.git
+[submodule "hw/rtl"]
+	path = hw/rtl
+	url = https://github.com/project-starch/capstone-ariane.git
