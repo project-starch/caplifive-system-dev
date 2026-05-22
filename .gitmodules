@@ -10,3 +10,6 @@
 [submodule "hw/rtl"]
 	path = hw/rtl
 	url = https://github.com/project-starch/capstone-ariane.git
+[submodule "hw/qemu"]
+	path = hw/qemu
+	url = https://github.com/project-starch/caplifive-qemu.git
