@@ -1,0 +1,33 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y \
+    git build-essential pkg-config meson ninja-build \
+    python3 python3-pip \
+    clang gcc-multilib g++-multilib \
+    bc bison flex \
+    libglib2.0-dev libpixman-1-dev libfdt-dev \
+    libaio-dev libcap-dev libseccomp-dev libslirp-dev \
+    device-tree-compiler help2man libncurses5-dev \
+    openjdk-11-jdk opam \
+    libssl-dev wget curl rsync cpio unzip file \
+    && rm -rf /var/lib/apt/lists/*
+
+# Rust toolchain
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
+    | sh -s -- -y --default-toolchain stable
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+# OCaml 5.2.0 via opam (required by Anvil)
+RUN opam init --disable-sandboxing --yes \
+    && opam switch create 5.2.0 --yes \
+    && opam install dune --yes \
+    && opam clean -a -c -s --logs
+
+ENV OPAM_SWITCH_PREFIX="/root/.opam/5.2.0"
+ENV CAML_LD_LIBRARY_PATH="/root/.opam/5.2.0/lib/stublibs:/root/.opam/5.2.0/lib/ocaml/stublibs:/root/.opam/5.2.0/lib/ocaml"
+ENV OCAML_TOPLEVEL_PATH="/root/.opam/5.2.0/lib/toplevel"
+ENV PATH="/root/.opam/5.2.0/bin:${PATH}"
+
+WORKDIR /workspace
