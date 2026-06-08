@@ -174,11 +174,13 @@ Make sure now that `anvil` is in your `PATH`.
 
 Location: `hw/rtl`
 
-First, point the `VIVADO_HOME` environmental variable to the location of your
+Point the `VIVADO_HOME` environment variable to the location of your
 Vivado installation:
 ```sh
 export VIVADO_HOME=/location/to/vivado
 ```
+
+Edit `hw/rtl/fpga-env.sh` to point `RISCV` to the location of your RISC-V toolchain.
 
 Next, generate the bitstream (it may take hours):
 ```sh
