@@ -9,7 +9,7 @@
 	url = https://github.com/kisp-nus/anvil.git
 [submodule "hw/rtl"]
 	path = hw/rtl
-	url = https://github.com/project-starch/capstone-ariane.git
+	url = https://github.com/project-starch/caplifive-cva6.git
 [submodule "hw/qemu"]
 	path = hw/qemu
 	url = https://github.com/project-starch/caplifive-qemu.git
