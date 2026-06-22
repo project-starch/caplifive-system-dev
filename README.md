@@ -6,10 +6,10 @@ The system can run either through QEMU-based emulation or on
 FPGA, and consists of
 components with the right versions that work together:
 
-- QEMU-based emulator: [hw/qemu](hw/qemu/README.md)
-- Software stack and buildroot: [sw/buildroot](sw/buildroot/README.md)
-- AnvilHDL compiler: [hw/anvil](hw/anvil/README.md)
-- RTL design: [hw/rtl](hw/rtl/README.md)
+- QEMU-based emulator: [hw/qemu](https://github.com/project-starch/caplifive-qemu)
+- Software stack and buildroot: [sw/buildroot](https://github.com/project-starch/caplifive-buildroot)
+- AnvilHDL compiler: [hw/anvil](https://github.com/kisp-nus/anvil)
+- RTL design: [hw/rtl](https://github.com/project-starch/caplifive-cva6)
 
 The documentation provided here is intended to provide consistent and
 easy-to-follow instructions for building the whole system from scratch.
