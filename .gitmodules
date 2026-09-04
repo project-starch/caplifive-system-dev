@@ -3,7 +3,7 @@
 	url = https://github.com/jasonyu1996/capstone-c.git
 [submodule "sw/buildroot"]
 	path = sw/buildroot
-	url = https://github.com/project-starch/captainer-buildroot.git
+	url = https://github.com/project-starch/caplifive-buildroot.git
 [submodule "hw/anvil"]
 	path = hw/anvil
 	url = https://github.com/kisp-nus/anvil.git
